@@ -14,6 +14,8 @@ docker pull mysql:5.6
 
 1. 必要に応じて起動Scriptのオプションを修正する。
     - `docker/start_mysql_5_6.sh`
+1. 必要に応じてMySQLの設定を修正する
+    - `docker/conf.d/config-file.cnf`
 1. 起動する
     - `docker/start_mysql_5_6.sh`
 
