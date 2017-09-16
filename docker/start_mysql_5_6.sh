@@ -12,12 +12,12 @@ readonly CONF_DIRECTORY="$(pwd)/conf.d"
 
 # start
 docker run \
-  --name ${CONTAINER_NAME} \
-  -p ${PORT_NUMBER}:3306 \
-  -e MYSQL_DATABASE=${DATABASE_NAME} \
-  -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
-  -v ${CONF_DIRECTORY}:/etc/mysql/conf.d \
   -d \
+  --name mysql-docker \
+  -p ${PORT_NUMBER}:3306 \
+  -v ${CONF_DIRECTORY}:/etc/mysql/conf.d \
+  --env MYSQL_DATABASE=${DATABASE_NAME} \
+  --env MYSQL_ALLOW_EMPTY_PASSWORD=yes \
   mysql:5.6
 
 echo "mysql docker container started."
