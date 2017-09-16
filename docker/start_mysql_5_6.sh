@@ -13,7 +13,7 @@ readonly CONF_DIRECTORY="$(pwd)/conf.d"
 # start
 docker run \
   -d \
-  --name mysql-docker \
+  --name ${CONTAINER_NAME} \
   -p ${PORT_NUMBER}:3306 \
   -v ${CONF_DIRECTORY}:/etc/mysql/conf.d \
   --env MYSQL_DATABASE=${DATABASE_NAME} \
