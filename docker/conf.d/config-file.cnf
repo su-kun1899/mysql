@@ -78,6 +78,8 @@ long_query_time = 2
 
 log-bin=mysql-bin
 
+binlog-format = ROW
+
 expire_logs_days = 5
 ##--------------------------------------------------------------------
 # Cache,Memory
